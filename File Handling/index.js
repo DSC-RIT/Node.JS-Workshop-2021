@@ -1,0 +1,5 @@
+const fs = require("fs")
+console.log("Writing to file...")
+fs.writeFile("test.txt","Hello World",()=>{})
+const content = fs.readFileSync("test.txt")
+console.log(String(content))

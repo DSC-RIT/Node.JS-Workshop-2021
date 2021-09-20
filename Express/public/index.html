@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Random Pun</title>
+  
+</head>
+<body>
+  <style>
+    body{
+      background-color: cyan;
+      color:black;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+    }
+    button{
+      padding: 5px 10px;
+
+    }
+    </style>
+    <h2 id="question">Question of the Pun</h2>
+    <p id="answer">Answer of the pun</p>
+    <button onclick="getPun()">Get New Pun</button>
+
+    <form action="/post" method="POST">
+        <h2>Add a new pun</h2>
+        <input type="text" placeholder="question" name="pun">
+        <br>
+        <input type="text" placeholder="answer" name="punchline">
+        <br>
+        <input type="submit">
+    </form>
+    <script>
+      async function getPun(){
+          //fetch api
+          const response = await fetch("/pun")
+          const body = await response.json()
+          document.getElementById("question").innerText = body.pun
+          document.getElementById("answer").innerText = body.punchline
+      }
+
+      getPun()
+    </script>
+
+</body>
+</html>

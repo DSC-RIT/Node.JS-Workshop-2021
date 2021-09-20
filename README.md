@@ -1,5 +1,7 @@
 # Node.JS Workshop 2021
 
+Presentation slides: https://docs.google.com/presentation/d/1kuAz55-MzLZ4XiA8_v8sKeM6_LCNSqgwauZJU2DKaWk/edit?usp=sharing&resourcekey=0-G2uSlsX1LnXchE9hSE2laA
+
 ## Assignments
 
 ### Assignment 1: Standard Libraries
